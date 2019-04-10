@@ -1,0 +1,19 @@
+{
+  "name": "next-playground",
+  "version": "1.0.0",
+  "description": "Package to play around with Next.js",
+  "main": "index.js",
+  "author": "Brett Abramczyk",
+  "license": "MIT",
+  "private": false,
+  "dependencies": {
+    "next": "^8.0.4",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6"
+  },
+  "scripts": {
+    "dev": "next",
+    "build": "next build",
+    "start": "next start"
+  }
+}
