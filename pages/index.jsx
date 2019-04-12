@@ -1,6 +1,6 @@
-import Head from "next/head";
+import Head from "next/head"
 
-export default function Index() {
+function Index({ userAgent }) {
   return (
     <>
       <Head>
@@ -28,6 +28,18 @@ export default function Index() {
       </style>
       <h1>Home page</h1>
       <h2>Information</h2>
+
+      <dl>
+        <dt>User Agent</dt>
+        <dd>{userAgent}</dd>
+      </dl>
     </>
-  );
+  )
 }
+
+Index.getInitialProps = async ({ req }) => {
+  const userAgent = req ? req.headers["user-agent"] : navigator.userAgent
+  return { userAgent }
+}
+
+export default Index
