@@ -1,4 +1,5 @@
 import Head from "next/head"
+import Sidenav from "../components/Sidenav"
 
 function Index({ userAgent }) {
   return (
@@ -26,13 +27,18 @@ function Index({ userAgent }) {
           }
         `}
       </style>
-      <h1>Home page</h1>
-      <h2>Information</h2>
+      <div style={{ display: "flex" }}>
+        <Sidenav />
+        <main>
+          <h1>Home page</h1>
+          <h2>Information</h2>
 
-      <dl>
-        <dt>User Agent</dt>
-        <dd>{userAgent}</dd>
-      </dl>
+          <dl>
+            <dt>User Agent</dt>
+            <dd>{userAgent}</dd>
+          </dl>
+        </main>
+      </div>
     </>
   )
 }
