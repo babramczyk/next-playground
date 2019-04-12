@@ -1,6 +1,12 @@
+import Head from "next/head";
+
 export default function HelloWorld() {
   return (
     <>
+      <Head>
+        <title>Hello World</title>
+      </Head>
+    
       <style jsx>{`
         img {
           max-width: 400px;
